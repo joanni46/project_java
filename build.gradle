@@ -1,0 +1,20 @@
+plugins {
+    id 'java' // или другую подходящую плагин для вашего случая
+}
+
+repositories {
+    mavenCentral()
+}
+
+sourcesSets {
+    main {
+        java {
+            sourceDirs = files("src/main/java")
+            resources.srcDirs = files("src/main/resources")
+        }
+    }
+}
+
+dependencies {
+    implementation 'org.apache.httpcomponents:httpclient:4.5.x' // или другие зависимости вашего проекта
+}
